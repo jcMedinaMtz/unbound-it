@@ -1,7 +1,11 @@
 html {
   background-color: rgb(54, 54, 54);
 }
-
+body {
+  margin: 0;
+  background-color: rgb(54, 54, 54);
+}
+/*
 .homepage-hero-module {
   position: fixed;
   z-index: -1;
@@ -54,9 +58,54 @@ html {
 
 .video-container video.fillWidth {
   width: 100%;
-}
+}*/
 
 .hidden {
   display: none;
   visibility: hidden;
+}
+
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background: url('http://unbound-it.com/video/Push-The-Buttons.jpg') no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
+
+.stopfade {
+  opacity: .5;
+}
+
+
+@media screen and (max-device-width: 800px) {
+  html {
+    background: url('http://unbound-it.com/video/Push-The-Buttons.jpg') #000 no-repeat center center fixed;
+  }
+  #bgvid {
+    display: none;
+  }
+}
+
+.bgTransparent {
+  background: none!important;
+  background-color: transparent!important;
+}
+
+header .fh5co-overlay {
+  background-color: rgba(80,79,68,0.5)!important;
+  position: fixed!important;
+}
+.fh5co-cover .fh5co-cover-text .btn-outline:hover,
+.fh5co-cover .fh5co-cover-text .btn-outline:focus,
+.fh5co-cover .fh5co-cover-text .btn-outline:active {
+  background-color: #6ab65b!important;
+  border: solid 2px #6ab65b!important;
 }
