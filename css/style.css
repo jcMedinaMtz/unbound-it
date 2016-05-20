@@ -109,3 +109,15 @@ header .fh5co-overlay {
   background-color: #6ab65b!important;
   border: solid 2px #6ab65b!important;
 }
+
+@media screen and (max-width: 480px) {
+  .fh5co-cover {
+    min-height: auto;
+  }
+  .fh5co-cover .fh5co-cover-text .full-height{
+    min-height: auto;
+  }
+  .fh5co-cover .fh5co-cover-text .full-height .fh5co-cover-intro {
+    height: auto;
+  }
+}
