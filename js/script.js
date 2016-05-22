@@ -7,6 +7,11 @@ if ( isMobile ) {
     $zopim.livechat.badge.hide();
   } );
 }
+else {
+  $zopim( function () {
+    $zopim.livechat.window.hide();
+  } );
+}
 
 
 var vid = document.getElementById( "bgvid" );
