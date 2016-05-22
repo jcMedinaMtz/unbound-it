@@ -1,27 +1,24 @@
-var ua = navigator.userAgent.toLowerCase(),
-  platform = navigator.platform.toLowerCase();
-platformName = ua.match( /ip(?:ad|od|hone)/ ) ? 'ios' : ( ua.match( /(?:webos|android)/ ) || platform.match( /mac|win|linux/ ) || [ 'other' ] )[ 0 ],
-  isMobile = /ios|android|webos/.test( platformName );
-if ( isMobile ) {
-  console.log('is mobile');
-  $zopim.livechat.badge.hide();
-  $zopim.livechat.window.hide();
-}
+$(document).ready(function(){
+  var vid = document.getElementById( "bgvid" );
+  var pauseButton = document.querySelector( "button" );
+  function vidFade() {
+    vid.classList.add( "stopfade" );
+  }
+  vid.addEventListener( 'ended', function () {
+    // only functional if "loop" is removed
+    vid.pause();
+    // to capture IE10
+    vidFade();
+  } );
 
 
-var vid = document.getElementById( "bgvid" );
-var pauseButton = document.querySelector( "button" );
+})
 
-function vidFade() {
-  vid.classList.add( "stopfade" );
-}
-
-vid.addEventListener( 'ended', function () {
-  // only functional if "loop" is removed
-  vid.pause();
-  // to capture IE10
-  vidFade();
-} );
+$( '#zopimPrompt' ).click( function () {
+  $zopim(function(){
+    $zopim.livechat.window.show();
+  });
+} )
 
 
 /*pauseButton.addEventListener("click", function() {
@@ -45,10 +42,3 @@ window.setTimeout( function() {
 //  $zopim(function() {
 //    $zopim.livechat.button.hide();
 //  });
-
-$( '#zopimPrompt' ).click( function () {
-  $zopim(function(){
-    $zopim.livechat.badge.show();
-    $zopim.livechat.window.show();
-  });
-} )
