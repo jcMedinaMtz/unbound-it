@@ -3,11 +3,12 @@ var ua = navigator.userAgent.toLowerCase(),
 platformName = ua.match( /ip(?:ad|od|hone)/ ) ? 'ios' : ( ua.match( /(?:webos|android)/ ) || platform.match( /mac|win|linux/ ) || [ 'other' ] )[ 0 ],
   isMobile = /ios|android|webos/.test( platformName );
 if ( isMobile ) {
+  console.log('is mobile');
   $zopim( function () {
     $zopim.livechat.badge.hide();
   } );
-}
-else {
+} else {
+  console.log('not mobile');
   $zopim( function () {
     $zopim.livechat.badge.hide();
     $zopim.livechat.window.hide();
