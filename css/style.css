@@ -87,7 +87,12 @@ video {
 
 @media screen and (max-device-width: 800px) {
   html {
-    background: url('http://unbound-it.com/video/Push-The-Buttons.jpg') #000 no-repeat center center fixed;
+    background-image: url('http://unbound-it.com/video/Push-The-Buttons.jpg');
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
   }
   #bgvid {
     display: none;
