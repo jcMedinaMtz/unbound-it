@@ -9,6 +9,7 @@ if ( isMobile ) {
 }
 else {
   $zopim( function () {
+    $zopim.livechat.badge.hide();
     $zopim.livechat.window.hide();
   } );
 }
