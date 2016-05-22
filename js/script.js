@@ -6,6 +6,10 @@ if ( isMobile ) {
   console.log('is mobile');
   $zopim( function () {
     $zopim.livechat.badge.hide();
+    $zopim.livechat.window.hide();
+    $zopim.livechat.onHide(function(){
+      console.log('hidden');
+    })
   } );
 } else {
   console.log('not mobile');
