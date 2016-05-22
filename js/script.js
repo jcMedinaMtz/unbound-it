@@ -5,7 +5,7 @@ platformName = ua.match( /ip(?:ad|od|hone)/ ) ? 'ios' : ( ua.match( /(?:webos|an
 if ( isMobile ) {
   $zopim(function() {
     $zopim.livechat.badge.hide();
-    $zopim.livechat.window.onHide(function(){
+    $zopim.livechat.onHide(function(){
       console.log('hide');
       $zopim.livechat.badge.hide();
     });
