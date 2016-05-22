@@ -6,7 +6,7 @@ if ( isMobile ) {
   console.log('is mobile');
   $zopim.livechat.badge.hide();
   $zopim.livechat.window.hide();
-} 
+}
 
 
 var vid = document.getElementById( "bgvid" );
@@ -47,5 +47,8 @@ window.setTimeout( function() {
 //  });
 
 $( '#zopimPrompt' ).click( function () {
-  $zopim.livechat.window.show();
+  $zopim(function(){
+    $zopim.livechat.badge.show();
+    $zopim.livechat.window.show();
+  });
 } )
