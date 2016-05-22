@@ -3,10 +3,12 @@ var ua = navigator.userAgent.toLowerCase(),
 platformName = ua.match( /ip(?:ad|od|hone)/ ) ? 'ios' : ( ua.match( /(?:webos|android)/ ) || platform.match( /mac|win|linux/ ) || [ 'other' ] )[ 0 ],
   isMobile = /ios|android|webos/.test( platformName );
 if ( isMobile ) {
-  console.log('movil');
   $zopim(function() {
     $zopim.livechat.badge.hide();
-    $zopim.livechat.button.hide();
+    $zopim.livechat.window.onHide(function(){
+      console.log('hide');
+      $zopim.livechat.badge.hide();
+    });
   });
 }
 
