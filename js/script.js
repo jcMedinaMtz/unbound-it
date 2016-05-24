@@ -1,7 +1,7 @@
 $(document).ready(function(){
   var vid = document.getElementById( "bgvid" );
   var pauseButton = document.querySelector( "button" );
-  function vidFade() {
+  function vidFade()
     vid.classList.add( "stopfade" );
   }
   vid.addEventListener( 'ended', function () {
@@ -14,11 +14,11 @@ $(document).ready(function(){
 
 })
 
-$( '#zopimPrompt' ).click( function () {
+/*$( '#zopimPrompt' ).click( function () {
   $zopim(function(){
     $zopim.livechat.window.show();
   });
-} )
+} )*/
 
 
 /*pauseButton.addEventListener("click", function() {
