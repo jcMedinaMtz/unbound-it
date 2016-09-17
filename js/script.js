@@ -1,8 +1,8 @@
-$(document).ready(function(){
-  var vid = document.getElementById( "bgvid" );
-  var pauseButton = document.querySelector( "button" );
+/*$(document).ready(function(){
+  var vid = $( '#bgvid' );
+  var pauseButton = $( '.button' );
   function vidFade()
-    vid.classList.add( "stopfade" );
+    vid.addClass( 'stopfade' );
   }
   vid.addEventListener( 'ended', function () {
     // only functional if "loop" is removed
@@ -12,6 +12,10 @@ $(document).ready(function(){
   } );
 
 
+})*/
+
+$('.next').click(function(){
+  ScrollNext();
 })
 
 /*$( '#zopimPrompt' ).click( function () {
